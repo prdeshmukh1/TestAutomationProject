@@ -49,6 +49,21 @@ pipeline {
 	        stage('Test') {
 	            steps {
 	                echo 'Testing..the workflow...'
+
+
+        UiPathTest (
+          testTarget: [$class: 'TestSetEntry', testSet: "TS_One"],
+          orchestratorAddress: "https://cloud.uipath.com/hometvsbixb/DefaultTenant/orchestrator_",
+          orchestratorTenant: "DefaultTenant",
+          folderName: "Shared",
+          timeout: "10000",
+          traceLoggingLevel: 'None',
+          testResultsOutputPath: "result.xml",
+          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "3f1c2c9e-fa9c-445a-a24f-56d00f88cfce"]
+        )
+
+
+
 	            }
 	        }
 	
