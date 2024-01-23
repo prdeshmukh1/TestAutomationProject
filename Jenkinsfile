@@ -53,7 +53,7 @@ pipeline {
 
         UiPathTest (
           testTarget: [$class: 'TestSetEntry', testSet: "TS_One"],
-          orchestratorAddress: "https://cloud.uipath.com/hometvsbixb/DefaultTenant/orchestrator_",
+          orchestratorAddress: "https://cloud.uipath.com/hometvsbixb/DefaultTenant/orchestrator",
           orchestratorTenant: "DefaultTenant",
           folderName: "Shared",     
           testResultsOutputPath: "result.xml",
