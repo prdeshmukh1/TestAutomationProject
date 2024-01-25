@@ -51,14 +51,14 @@ pipeline {
 	                echo 'Testing..the workflow...'
 
 
-        UiPathTest (
-          testTarget: [$class: 'TestSetEntry', testSet: "TS_One"],
-          orchestratorAddress: "https://cloud.uipath.com/accelirateuipcl/AccelirateOrchCloud/orchestrator_",
-          orchestratorTenant: "AccelirateOrchCloud",
-          folderName: "Shared",     
-          testResultsOutputPath: "result.xml",
-          credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "3f1c2c9e-fa9c-445a-a24f-56d00f88cfce"]
-        )
+       // UiPathTest (
+         // testTarget: [$class: 'TestSetEntry', testSet: "TS_One"],
+         // orchestratorAddress: "https://cloud.uipath.com/accelirateuipcl/AccelirateOrchCloud/orchestrator_",
+       //   orchestratorTenant: "AccelirateOrchCloud",
+         // folderName: "Shared",     
+         // testResultsOutputPath: "result.xml",
+         // credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "3f1c2c9e-fa9c-445a-a24f-56d00f88cfce"]
+       // )
 
 
 
