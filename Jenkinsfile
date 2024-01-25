@@ -8,9 +8,9 @@ pipeline {
 	        MINOR = '0'
 	        //Orchestrator Services
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
-	        UIPATH_ORCH_LOGICAL_NAME = "hometvsbixb"
-	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
-	        UIPATH_ORCH_FOLDER_NAME = "Shared"
+	        UIPATH_ORCH_LOGICAL_NAME = "accelirateuipcl"
+	        UIPATH_ORCH_TENANT_NAME = "AccelirateOrchCloud"
+	        UIPATH_ORCH_FOLDER_NAME = "My Workspace"
 	    }
 	
 
@@ -53,8 +53,8 @@ pipeline {
 
         UiPathTest (
           testTarget: [$class: 'TestSetEntry', testSet: "TS_One"],
-          orchestratorAddress: "https://cloud.uipath.com/hometvsbixb/DefaultTenant/orchestrator",
-          orchestratorTenant: "DefaultTenant",
+          orchestratorAddress: "https://cloud.uipath.com/accelirateuipcl/AccelirateOrchCloud/orchestrator_",
+          orchestratorTenant: "AccelirateOrchCloud",
           folderName: "Shared",     
           testResultsOutputPath: "result.xml",
           credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "3f1c2c9e-fa9c-445a-a24f-56d00f88cfce"]
