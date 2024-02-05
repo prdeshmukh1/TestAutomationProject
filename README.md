@@ -13,4 +13,7 @@ Detailed tutorial: https://forum.uipath.com/t/uipath-jenkins-cicd-pipeline-tutor
 Guide document:
 https://docs.uipath.com/test-suite/automation-suite/2023.10/user-guide/connecting-a-jira-project
 
+ALM Tool Integration:
+https://docs.uipath.com/test-suite/automation-suite/2023.10/user-guide/connecting-a-jira-project#configure-jira-connection
+
 

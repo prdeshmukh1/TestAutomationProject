@@ -12,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.3.0",
-  "projectVersion": "1.0.160495155",
+  "projectVersion": "1.0.160850121",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -54,6 +54,12 @@
         "testCaseId": "705f2a18-bb3c-4090-982d-5f03dbdccd5f",
         "testCaseType": "TestCase",
         "fileName": "TestCase1.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "805df7ad-7530-4126-b804-d6e04b7cbd53",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase_InvalidInput.xaml"
       }
     ],
     "modernBehavior": true,
