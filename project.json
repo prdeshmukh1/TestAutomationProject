@@ -1,12 +1,9 @@
 {
-  "name": "UIPathSampleProj",
-  "projectId": "5b36c781-8854-4978-a981-224ba446267b",
-  "description": "Blank Process",
+  "name": "TestAutomationProject",
+  "projectId": "f26d5514-a069-4ae9-b91c-92f30cf74a4b",
+  "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.22.3]",
-    "UiPath.GitHub.IntegrationService.Activities": "[5.0.7]",
-    "UiPath.Mail.Activities": "[1.21.1]",
     "UiPath.System.Activities": "[23.10.3]",
     "UiPath.Testing.Activities": "[23.10.0]",
     "UiPath.UIAutomation.Activities": "[23.10.7]"
@@ -15,7 +12,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "23.10.3.0",
-  "projectVersion": "1.0.159700503",
+  "projectVersion": "1.0.160495155",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -36,7 +33,7 @@
   },
   "designOptions": {
     "projectProfile": "Developement",
-    "outputType": "Process",
+    "outputType": "Tests",
     "libraryOptions": {
       "includeOriginalXaml": false,
       "privateWorkflows": []
@@ -47,9 +44,15 @@
     "fileInfoCollection": [
       {
         "editingStatus": "Publishable",
-        "testCaseId": "93a12a83-b4a9-41b6-b33c-a508377e4136",
+        "testCaseId": "ea18ee2f-0b46-4505-a0c7-546be639ba50",
         "testCaseType": "TestCase",
         "executionTemplateInvokeIsolated": false,
+        "fileName": "TestCase2.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "705f2a18-bb3c-4090-982d-5f03dbdccd5f",
+        "testCaseType": "TestCase",
         "fileName": "TestCase1.xaml"
       }
     ],
@@ -57,14 +60,6 @@
     "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
-  "entryPoints": [
-    {
-      "filePath": "Main.xaml",
-      "uniqueId": "31334e17-5170-48f3-bddb-5d9210ebdb9a",
-      "input": [],
-      "output": []
-    }
-  ],
   "isTemplate": false,
   "templateProjectData": {},
   "publishData": {},
