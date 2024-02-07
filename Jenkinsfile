@@ -45,17 +45,30 @@ pipeline {
 	        )
 	            }
 	        }
+			
+			
 	         // Test Stages
 	        stage('Test') {
 	            steps {
 	                echo 'Testing..the workflow...'
 
+						UiPathTest (
+									attachRobotLogs: true, credentials: UserPass('8a5a1d60-1306-4044-b8f1-51f6ce4a1685'), 
+									folderName: 'Test Case Prashant', 
+									orchestratorAddress: 'https://cloud.uipath.com/accelirateuipcl/AccelirateOrchCloud/orchestrator_', 
+									orchestratorTenant: 'AccelirateOrchCloud', parametersFilePath: '', projectUrl: '', repositoryBranch: '', 
+									repositoryCommit: '', repositoryType: '', repositoryUrl: '', 
+									testResultsOutputPath: 'Build ${BUILD_NUMBER}\\Results.xml', 
+									testTarget: TestSet('TS1'), 
+									traceLevel: 'Information'
+									)
+			
 
        // UiPathTest (
-         // testTarget: [$class: 'TestSetEntry', testSet: "TS_One"],
+         // testTarget: [$class: 'TestSetEntry', testSet: "TS1"],
          // orchestratorAddress: "https://cloud.uipath.com/accelirateuipcl/AccelirateOrchCloud/orchestrator_",
        //   orchestratorTenant: "AccelirateOrchCloud",
-         // folderName: "Shared",     
+         // folderName: "Test Case Prashant",     
          // testResultsOutputPath: "result.xml",
          // credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "3f1c2c9e-fa9c-445a-a24f-56d00f88cfce"]
        // )
