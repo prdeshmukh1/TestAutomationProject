@@ -53,11 +53,11 @@ pipeline {
 	                echo 'Testing..the workflow...'
 
 						UiPathTest (
-									attachRobotLogs: true, credentials: UserPass('8a5a1d60-1306-4044-b8f1-51f6ce4a1685'), 
+									attachRobotLogs: true, credentials: UserPass('8f8685bb-442a-407f-9f82-0d1e8ed60898'), 
 									folderName: 'Test Case Prashant', 
 									orchestratorAddress: 'https://cloud.uipath.com/accelirateuipcl/AccelirateOrchCloud/orchestrator_', 
-									orchestratorTenant: 'AccelirateOrchCloud', parametersFilePath: '', projectUrl: '', repositoryBranch: '', 
-									repositoryCommit: '', repositoryType: '', repositoryUrl: '', 
+									orchestratorTenant: 'AccelirateOrchCloud', parametersFilePath: '', projectUrl: '', repositoryBranch: 'main', 
+									repositoryCommit: '', repositoryType: 'git', repositoryUrl: 'https://github.com/prdeshmukh1/TestAutomationProject/tree/main', 
 									testResultsOutputPath: 'Build ${BUILD_NUMBER}\\Results.xml', 
 									testTarget: TestSet('TS1'), 
 									traceLevel: 'Information',
