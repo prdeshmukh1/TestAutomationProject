@@ -53,7 +53,7 @@ pipeline {
 	                echo 'Testing..the workflow...'
 
 						UiPathTest (
-									attachRobotLogs: true, credentials: UserPass('8f8685bb-442a-407f-9f82-0d1e8ed60898'), 
+									attachRobotLogs: true, credentials: UserPass('06d7f00f-8408-4cb8-83f4-6fb9627a7982'), 
 									folderName: "${UIPATH_ORCH_FOLDER_NAME}", 
 									orchestratorAddress: "${UIPATH_ORCH_URL}", 
 									orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}", 
