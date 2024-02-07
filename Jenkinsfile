@@ -55,7 +55,7 @@ pipeline {
 						UiPathTest (
 									attachRobotLogs: true, 
 							//		credentials: UserPass('8a5a1d60-1306-4044-b8f1-51f6ce4a1685'), 
-									credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "3f1c2c9e-fa9c-445a-a24f-56d00f88cfce"],
+									credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "8a5a1d60-1306-4044-b8f1-51f6ce4a1685"],
 									folderName: "${UIPATH_ORCH_FOLDER_NAME}", 
 									orchestratorAddress: "${UIPATH_ORCH_URL}", 
 									orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}", 
