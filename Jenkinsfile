@@ -54,9 +54,10 @@ pipeline {
 
 						UiPathTest (
 									attachRobotLogs: true, credentials: UserPass('8f8685bb-442a-407f-9f82-0d1e8ed60898'), 
-									folderName: 'Test Case Prashant', 
-									orchestratorAddress: 'https://cloud.uipath.com/accelirateuipcl', 
-									orchestratorTenant: 'AccelirateOrchCloud', parametersFilePath: '', projectUrl: '', repositoryBranch: 'main', 
+									folderName: "${UIPATH_ORCH_FOLDER_NAME}", 
+									orchestratorAddress: "${UIPATH_ORCH_URL}", 
+									orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}", 
+									parametersFilePath: '', projectUrl: '', repositoryBranch: 'main', 
 									repositoryCommit: '', repositoryType: 'git', repositoryUrl: 'https://github.com/prdeshmukh1/TestAutomationProject', 
 									testResultsOutputPath: 'Build ${BUILD_NUMBER}\\Results.xml', 
 									testTarget: TestSet('TS1'), 
