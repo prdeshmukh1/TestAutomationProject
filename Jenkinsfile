@@ -60,7 +60,8 @@ pipeline {
 									repositoryCommit: '', repositoryType: '', repositoryUrl: '', 
 									testResultsOutputPath: 'Build ${BUILD_NUMBER}\\Results.xml', 
 									testTarget: TestSet('TS1'), 
-									traceLevel: 'Information'
+									traceLevel: 'Information',
+									timeout: 5000
 									)
 			
 
