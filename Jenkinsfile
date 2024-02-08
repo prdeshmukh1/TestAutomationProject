@@ -1,9 +1,7 @@
 pipeline {
 	    agent any
-	
-
 	        // Environment Variables
-	        environment {
+	    environment {
 	        MAJOR = '1'
 	        MINOR = '0'
 	        //Orchestrator Services
@@ -42,27 +40,10 @@ pipeline {
 	                      version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
 	                      useOrchestrator: false,
 						  traceLevel: 'None'
-	        )
-	            }
-	        }
-			
-			
-			
-		//	stage ('PostBuild') {
-		//	  steps {
-		//		UiPathTest (
-		//		  testTarget: [$class: 'TestSetEntry', testSet: "TS1"],
-		//		  orchestratorAddress: "${UIPATH_ORCH_URL}", 
-		//		  orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}", 
-		//		  folderName: "${UIPATH_ORCH_FOLDER_NAME}", 
-		//		  timeout: "10000",
-		//		  traceLoggingLevel: 'Information',
-		//		  testResultsOutputPath: "result.xml",
-		//		  credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "API_AccessUserKey"]
-		//		)
-		//	  }
-		//	}
-	
+								)
+						}
+					}	
+
 			
 	         // Test Stages
 	        stage('Test') {
@@ -82,9 +63,9 @@ pipeline {
 									repositoryCommit: '', 
 									repositoryType: 'git', 
 									repositoryUrl: "https://github.com/prdeshmukh1/TestAutomationProject", 
-									testResultsOutputPath: 'Build ${BUILD_NUMBER}\\Results.xml', 
+									testResultsOutputPath: "Results.xml", 
 									testTarget: TestSet('TS1'), 
-									traceLevel: 'Information',
+									traceLevel: 'None',
 									timeout: 3600
 									)
 			
@@ -98,13 +79,8 @@ pipeline {
          // credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "3f1c2c9e-fa9c-445a-a24f-56d00f88cfce"]
        // )
 
-
-
-	            }
-	        }
-			
-
-    
+	   }
+	        } 
   
 	
 
@@ -160,7 +136,7 @@ pipeline {
 	        }
 	        always {
 	            /* Clean workspace if success */
-	            cleanWs()
+	           // cleanWs()
 	        }
 	    }
 	
