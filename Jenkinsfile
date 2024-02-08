@@ -48,20 +48,20 @@ pipeline {
 			
 			
 			
-			stage ('PostBuild') {
-			  steps {
-				UiPathTest (
-				  testTarget: [$class: 'TestSetEntry', testSet: "TS1"],
-				  orchestratorAddress: "${UIPATH_ORCH_URL}", 
-				  orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}", 
-				  folderName: "${UIPATH_ORCH_FOLDER_NAME}", 
-				  timeout: "10000",
-				  traceLoggingLevel: 'Information',
-				  testResultsOutputPath: "result.xml",
-				  credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "credentialsId"]
-				)
-			  }
-			}
+		//	stage ('PostBuild') {
+		//	  steps {
+		//		UiPathTest (
+		//		  testTarget: [$class: 'TestSetEntry', testSet: "TS1"],
+		//		  orchestratorAddress: "${UIPATH_ORCH_URL}", 
+		//		  orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}", 
+		//		  folderName: "${UIPATH_ORCH_FOLDER_NAME}", 
+		//		  timeout: "10000",
+		//		  traceLoggingLevel: 'Information',
+		//		  testResultsOutputPath: "result.xml",
+		//		  credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "API_AccessUserKey"]
+		//		)
+		//	  }
+		//	}
 	
 			
 	         // Test Stages
@@ -72,7 +72,8 @@ pipeline {
 						UiPathTest (
 									attachRobotLogs: true, 
 							//		credentials: UserPass('8a5a1d60-1306-4044-b8f1-51f6ce4a1685'), 
-									credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "8a5a1d60-1306-4044-b8f1-51f6ce4a1685"],
+							//		credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: "8a5a1d60-1306-4044-b8f1-51f6ce4a1685"],
+									credentials: Token(accountName: 'accelirateuipcl', credentialsId: 'API_AccessUserKey'),
 									folderName: "${UIPATH_ORCH_FOLDER_NAME}", 
 									orchestratorAddress: "${UIPATH_ORCH_URL}", 
 									orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}", 
