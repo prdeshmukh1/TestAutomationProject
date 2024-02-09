@@ -113,7 +113,7 @@ pipeline {
 	                echo 'Deploy to Production'
 	                }
 	            }
-	    }
+	    }//Stages
 	
 
 	    // Options
@@ -136,9 +136,9 @@ pipeline {
 	        }
 	        always {
 	            /* Clean workspace if success */
-	           // cleanWs()
+	            cleanWs()
 	        }
-	    }
+	    }//post
 	
 
 	}
