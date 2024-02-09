@@ -64,7 +64,7 @@ pipeline {
 									repositoryType: 'git', 
 									repositoryUrl: "https://github.com/prdeshmukh1/TestAutomationProject", 
 									testResultsOutputPath: "Results.xml", 
-									testTarget: TestSet('TS1'), 
+									testTarget: TestSet('SMOKE'), 
 									traceLevel: 'None',
 									timeout: 3600
 									)
@@ -121,7 +121,7 @@ pipeline {
 	        // Timeout for pipeline
 	        timeout(time:80, unit:'MINUTES')
 	        skipDefaultCheckout()
-	    }
+	    }//options
 	
 
 	
@@ -141,4 +141,4 @@ pipeline {
 	    }//post
 	
 
-	}
+	}// pipeline
